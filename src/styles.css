@@ -1,0 +1,147 @@
+@import "@fontsource/cairo/arabic-400.css";
+@import "@fontsource/cairo/arabic-700.css";
+@import "@fontsource/cairo/latin-400.css";
+@import "@fontsource/cairo/latin-700.css";
+@import "@fontsource/amiri/arabic-400.css";
+@import "@fontsource/amiri/arabic-700.css";
+@import "@fontsource/amiri/latin-400.css";
+@import "@fontsource/amiri/latin-700.css";
+@import "@fontsource/tajawal/arabic-400.css";
+@import "@fontsource/tajawal/arabic-700.css";
+@import "@fontsource/tajawal/latin-400.css";
+@import "@fontsource/tajawal/latin-700.css";
+@import "@fontsource/almarai/arabic-400.css";
+@import "@fontsource/almarai/arabic-700.css";
+@import "@fontsource/almarai/latin-400.css";
+@import "@fontsource/almarai/latin-700.css";
+@import "@fontsource/ibm-plex-sans-arabic/arabic-400.css";
+@import "@fontsource/ibm-plex-sans-arabic/arabic-700.css";
+@import "@fontsource/ibm-plex-sans-arabic/latin-400.css";
+@import "@fontsource/ibm-plex-sans-arabic/latin-700.css";
+@import "@fontsource/changa/arabic-400.css";
+@import "@fontsource/changa/arabic-700.css";
+@import "@fontsource/changa/latin-400.css";
+@import "@fontsource/changa/latin-700.css";
+@import "@fontsource/noto-kufi-arabic/arabic-400.css";
+@import "@fontsource/noto-kufi-arabic/arabic-700.css";
+@import "@fontsource/noto-kufi-arabic/latin-400.css";
+@import "@fontsource/noto-kufi-arabic/latin-700.css";
+@import "@fontsource/reem-kufi/arabic-400.css";
+@import "@fontsource/reem-kufi/arabic-700.css";
+@import "@fontsource/reem-kufi/latin-400.css";
+@import "@fontsource/reem-kufi/latin-700.css";
+@import "@fontsource/lemonada/arabic-400.css";
+@import "@fontsource/lemonada/arabic-700.css";
+@import "@fontsource/lemonada/latin-400.css";
+@import "@fontsource/lemonada/latin-700.css";
+@import "@fontsource/noto-naskh-arabic/arabic-400.css";
+@import "@fontsource/noto-naskh-arabic/arabic-700.css";
+@import "@fontsource/noto-naskh-arabic/latin-400.css";
+@import "@fontsource/noto-naskh-arabic/latin-700.css";
+@import "@fontsource/el-messiri/arabic-400.css";
+@import "@fontsource/el-messiri/arabic-700.css";
+@import "@fontsource/el-messiri/latin-400.css";
+@import "@fontsource/el-messiri/latin-700.css";
+@import "@fontsource/aref-ruqaa/arabic-400.css";
+@import "@fontsource/aref-ruqaa/arabic-700.css";
+@import "@fontsource/aref-ruqaa/latin-400.css";
+@import "@fontsource/aref-ruqaa/latin-700.css";
+@import "@fontsource/scheherazade-new/arabic-400.css";
+@import "@fontsource/scheherazade-new/arabic-700.css";
+@import "@fontsource/scheherazade-new/latin-400.css";
+@import "@fontsource/scheherazade-new/latin-700.css";
+@import "@fontsource/lateef/arabic-400.css";
+@import "@fontsource/lateef/arabic-700.css";
+@import "@fontsource/lateef/latin-400.css";
+@import "@fontsource/lateef/latin-700.css";
+@import "@fontsource/markazi-text/arabic-400.css";
+@import "@fontsource/markazi-text/arabic-700.css";
+@import "@fontsource/markazi-text/latin-400.css";
+@import "@fontsource/markazi-text/latin-700.css";
+@import "@fontsource/harmattan/arabic-400.css";
+@import "@fontsource/harmattan/arabic-700.css";
+@import "@fontsource/harmattan/latin-400.css";
+@import "@fontsource/harmattan/latin-700.css";
+@import "@fontsource/mirza/arabic-400.css";
+@import "@fontsource/mirza/arabic-700.css";
+@import "@fontsource/mirza/latin-400.css";
+@import "@fontsource/mirza/latin-700.css";
+@import "@fontsource/rakkas/arabic-400.css";
+@import "@fontsource/rakkas/latin-400.css";
+@import "@fontsource/katibeh/arabic-400.css";
+@import "@fontsource/katibeh/latin-400.css";
+@import "@fontsource/lalezar/arabic-400.css";
+@import "@fontsource/lalezar/latin-400.css";
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", "FreeSerif", "DejaVu Sans", sans-serif;
+  --color-ink: #14120e;
+  --color-ink-2: #1c1914;
+  --color-panel: #26221c;
+  --color-line: #3a342b;
+  --color-cream: #f6f1e7;
+  --color-sand: #c9bfb0;
+  --color-gold: #e0a84a;
+  --color-gold-2: #c4923c;
+  --color-clay: #d4654a;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.125rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-ink);
+    color: var(--color-cream);
+    font-family: var(--font-sans);
+  }
+}
+
+.checker {
+  background-color: var(--color-ink-2);
+  background-image:
+    linear-gradient(45deg, var(--color-panel) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--color-panel) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--color-panel) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--color-panel) 75%);
+  background-size: 32px 32px;
+  background-position:
+    0 0,
+    0 16px,
+    16px -16px,
+    -16px 0;
+}
+
+.design-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--color-gold) 30%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-gold) 30%, transparent) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
