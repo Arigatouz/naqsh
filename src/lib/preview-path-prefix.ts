@@ -38,11 +38,7 @@ export function previewPathRewrite(): LocationRewrite | undefined {
   if (typeof window === "undefined") return undefined;
   const preview = previewPathPrefix(window.location.hostname, window.location.pathname);
   if (preview) return prefixRewrite(preview);
-  const host = window.location.hostname.toLowerCase();
-  if (host.endsWith(".github.io")) {
-    const prefix = "/naqsh";
-    const path = window.location.pathname;
-    if (path === prefix || path.startsWith(`${prefix}/`)) return prefixRewrite(prefix);
-  }
+  // GitHub Pages already builds with Vite base "/naqsh/". A second rewrite
+  // prefixes that path again and the browser lands on /naqsh/naqsh/.
   return undefined;
 }
